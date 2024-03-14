@@ -1,0 +1,14 @@
+Funcionamiento de esta version:
+Es simplemente una prueba para la implementacion de navegacion entre distintas ventanas de la aplicacion
+Como añadir una nueva ventana:
+1- Crear una nueva ventana en la carpeta "screens"
+2- En el archivo dentro de la carpeta "navigation" importar la ventana, un ejemplo de como hacerlo: "import nombreVentana from '../screens/nombreVentana';
+3- Añadir dicha ventana en la funcion MyScreens, ejemplo: <Stack.Screen name="apodo" component={nombreVentana} />
+Nota: Para la propiedad "name" se debe agregar un apodo, es decir, como haremos referencia a dicho componente para hacer la transicion entre ventanas
+4- Existen varias formas de implementar el cambio de ventana, la que mas usaremos es atraves de botones, para ello cada que implementemos un boton que tendra la
+funcion de dicha transicion, ejemplo:
+<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('apodo')}>
+        <Text style={styles.buttonText}>GET STARTED!</Text>
+      </TouchableOpacity>
+Importante: Ahora mismo no he logrado hacer que detecte la funcion "navigate" a la hora de hacer la transicion, sigo viendo tutoriales del uso de navigate, si pueden
+investigar por si cuenta estaria bien.
